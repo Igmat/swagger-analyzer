@@ -138,5 +138,5 @@ Read to contribute [PULL_REQUEST_TEMPLATE.md](PULL_REQUEST_TEMPLATE.md)
 
 ## License
 
-Copyright (c) Igmat.
+Copyright (c) Ihor Chulinda.
 This source code is licensed under the MIT license.
