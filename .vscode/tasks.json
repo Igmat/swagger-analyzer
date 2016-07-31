@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": false,
+    "echoCommand": true,
+    "args": ["-s", "run"],
+    "tasks": [
+        {
+            "taskName": "clean"
+        },
+        {
+            "taskName": "build",
+            "isBuildCommand": true,
+            "problemMatcher": "$tsc"
+        },
+        {
+            "taskName": "build:watch",
+            "isBuildCommand": true,
+            "isWatching": true,
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "test",
+            "isTestCommand": true
+        },
+        {
+            "taskName": "test:watch",
+            "isTestCommand": true,
+            "isWatching": true,
+            "problemMatcher": "$tsc-watch"
+        }
+    ]
+}

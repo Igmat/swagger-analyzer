@@ -1,0 +1,54 @@
+{
+  "name": "swagger-analyzer",
+  "description": "Analyzes swagger (OpenAPI) definitions",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "keywords": [
+    "typescript",
+    "swagger",
+    "OpenAPI"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "build:watch": "tsc -p . -w",
+
+    "test": "npm run build && mocha",
+    "test:watch": "npm run build && concurrent -k \"tsc -p . -w\" \"mocha -w\"",
+
+    "clean": "rimraf dist/**/*",
+    "clean-build": "npm run clean && npm run build",
+
+    "coverage": "gulp coverage",
+    "doc": "gulp typedoc",
+    
+    "patch": "npm run clean-build && gulp tag",
+    "feature": "npm run clean-build && gulp tag --minor",
+    "release": "npm run clean-build && gulp tag --major",
+    "prepublish": "npm run clean-build"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Ihor Chulinda <ichulinda@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "swagger.d.ts": "^0.1.0",
+    "@types/node": "latest",
+    "@types/chai": "latest",
+    "@types/mocha": "latest",
+    "typescript": "next",
+    "tslint": "next",
+    "mocha": "^2.5.3",
+    "chai": "^3.5.0",
+    "rimraf": "^2.5.4",
+    "concurrently": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-release-tasks": "^0.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Igmat/swagger-analyzer.git"
+  }
+}
