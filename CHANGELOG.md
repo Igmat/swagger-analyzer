@@ -26,16 +26,15 @@
 
 ### Features
 - Automatic documentation generation.
-- Mocha and Chai
- testing tool support.
+- Mocha and Chai testing tool support.
 - Code Coverage with istanbul.
-- Build process with Gulp.
+- Build process with NPM scripts.
+- VS Code tasks and launch configs for that who use it.
 - Debugging your sources with sourcemaps.
 - Typescript Based node module output.
 - Automatic generation of CHANAGELOG.md and PULL_REQUEST_TEMPLATE.md.
 - Automatic table of content generation with [doctoc](https://github.com/thlorenz/doctoc).
 - Lint support with
-  - [JSHint](http://jshint.com/)
   - [TSLint](https://www.npmjs.com/package/tslint)
   
 
