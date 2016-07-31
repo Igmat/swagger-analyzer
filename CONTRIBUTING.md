@@ -15,7 +15,7 @@ We're open source! We love contributions! An ordered list of helpful things:
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Creating issues](#creating-issues)
+- [Creating Issues](#creating-issues)
   - [Bug Issues](#bug-issues)
   - [Feature Issues](#feature-issues)
   - [Assignees](#assignees)
