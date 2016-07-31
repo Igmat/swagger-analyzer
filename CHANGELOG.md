@@ -1,32 +1,33 @@
+# Change Log
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Change Log](#change-log)
-  - [[Unreleased]](#unreleased)
-    - [Added](#added)
-  - [[0.0.1] - 26-07-2016](#001---26-07-2016)
-    - [Added](#added-1)
-    - [Features](#features)
+
+- [[Unreleased]](#unreleased)
+  - [Added](#added)
+- [[0.0.0] - 2016-07-26](#000---2016-07-26)
+  - [Added](#added-1)
+  - [Features](#features)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Change Log
 
 ## [Unreleased]
 
 ### Added
+> Build tools
+### Features
+- Automatic documentation generation.
+- Code Coverage with istanbul.
+- Ready to use as library npm package.
 
-*Use this section to add the details of your unreleased version*
-
-## [0.0.1] - 26-07-2016
+## [0.0.0] - 2016-07-26
 
 ### Added
 > Initial project structure.
 
 ### Features
-- Automatic documentation generation.
 - Mocha and Chai testing tool support.
-- Code Coverage with istanbul.
 - Build process with NPM scripts.
 - VS Code tasks and launch configs for that who use it.
 - Debugging your sources with sourcemaps.

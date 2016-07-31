@@ -210,7 +210,7 @@ export namespace ServiceGeneration {
                     //checking for that key is httpVerb
                     if (key != '$ref' && key != 'parameters') {
                         var httpVerb: string = key;
-                        var operation: Swagger.Operation = path[key];
+                        var operation = path[key] as Swagger.Operation;
                         var serviceName = operation.tags[0];
                         //we are using first tag of operation to group operations from different paths into one service
                         if (!serviceViews[serviceName]) {

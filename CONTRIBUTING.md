@@ -3,6 +3,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [Helpful things](#helpful-things)
 - [Creating Issues](#creating-issues)
   - [Bug Issues](#bug-issues)
@@ -11,6 +12,11 @@
   - [Milestones](#milestones)
   - [Labels](#labels)
 - [Developing](#developing)
+  - [Initializing](#initializing)
+  - [Building](#building)
+    - [Bonus for VS Code users](#bonus-for-vs-code-users)
+  - [Running, debugging and testing](#running-debugging-and-testing)
+    - [Bonus for VS Code users](#bonus-for-vs-code-users-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -24,6 +30,7 @@ We're open source! We love contributions! An ordered list of helpful things:
 4. Bug reports
 5. Problem statements
 6. Feature requests
+
 
 ## Creating Issues
 GitHub issues can be treated like a massive, communal todo list. If you notice something wrong, toss an issue in and we'll get to it!
@@ -71,3 +78,50 @@ Some good ways to make sure it's not missed:
     “Write every commit message like the next person who reads it is an axe-wielding maniac who knows where you live”.
 
 * Thank you for contributing!
+
+### Initializing
+For initializing just run:
+```
+npm install
+```
+If you'll run only tasks from package.json you'll need no global dependency for developing this project.
+
+### Building
+To build project run:
+```
+npm run build
+```
+or for watching:
+```
+npm run build:watch
+```
+
+If you are changing folder structure or removing some files run:
+```
+npm run clean-build
+```
+or for watching:
+```
+npm run clean
+npm run build:watch
+```
+#### Bonus for VS Code users
+There are defined tasks for build and watching.  
+Unfrotunately, due to issues with NPM scripts in VS Code tasks, I can't add clean into build task now, so you have to call it manually
+if you're changing folder structure or removing some files.
+
+### Running, debugging and testing
+To test project run:
+```
+npm test
+```
+or for watching:
+```
+npm run test:watch
+```
+#### Bonus for VS Code users
+There are defined tasks for test and watching.  
+Unfrotunately, due to issues with NPM scripts in VS Code tasks, I recommend running test:watch from command line.
+
+There is also defined config in launch.json to start debugging session while running mocha tests. Just set breapoint in you TypeScript code and launch project.  
+I've tried to set it with running mocha in watch mode, but due to issues with output in VS Code now it configured only for one run.
