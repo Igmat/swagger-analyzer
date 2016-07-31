@@ -16,6 +16,7 @@
 
 ### Added
 > Build tools
+
 ### Features
 - Automatic documentation generation.
 - Code Coverage with istanbul.
