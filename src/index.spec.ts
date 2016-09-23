@@ -1,11 +1,11 @@
 import {  } from 'mocha';
 import { expect } from 'chai';
-import { Test } from './index';
+import { SwaggerAnalyzer } from './index';
 
-describe('Unit Tests:', () => {
-    describe('2 + 4', () => {
-        it('should be 6', (done) => {
-            expect(2 + 4).to.equals(6);
+describe('Swagger Analyzer:', () => {
+    describe('2 + 5', () => {
+        it('should be 7', (done) => {
+            expect(2 + 5).to.equals(7);
             done();
         });
     });

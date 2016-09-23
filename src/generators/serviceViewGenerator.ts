@@ -1,5 +1,6 @@
 import {EnumGeneration} from './enumViewGenerator';
-import {ModelGeneration} from './modelViewGenerator';
+import { ModelGeneration } from './modelViewGenerator';
+import { Swagger } from '../swagger';
 
 export namespace ServiceGeneration {
 

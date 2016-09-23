@@ -1,4 +1,4 @@
-declare module Swagger {
+export namespace Swagger {
 
     export interface Info {
         title: string;
@@ -39,7 +39,7 @@ declare module Swagger {
     }
 
     // ----------------------------- Parameter -----------------------------------
-    interface BaseParameter {
+    export interface BaseParameter {
         name: string;
         in: string;
         required?: boolean;
@@ -63,12 +63,12 @@ declare module Swagger {
         type: string;
     }
 
-    export interface FormDataParameter extends BaseParameter, BaseParameter {
+    export interface FormDataParameter extends BaseParameter {
         type: string;
         collectionFormat?: string;
     }
 
-    type Parameter =
+    export type Parameter =
         BodyParameter |
         FormDataParameter |
         QueryParameter |
@@ -130,7 +130,7 @@ declare module Swagger {
         parameters?: [OperationParameter];
         schemes?: [string];
         deprecated?: boolean;
-        security?: [Secuirty]
+        security?: [Secuirty];
     }
 
     // ----------------------------- Response ------------------------------------
@@ -142,7 +142,7 @@ declare module Swagger {
     }
 
     // ------------------------------ Schema -------------------------------------
-    interface BaseSchema {
+    export interface BaseSchema {
         format?: string;
         title?: string;
         description?: string;
@@ -187,7 +187,7 @@ declare module Swagger {
     }
 
     // ----------------------------- Security ------------------------------------
-    interface BaseSecurity {
+    export interface BaseSecurity {
         type: string;
         description?: string;
     }
@@ -201,7 +201,7 @@ declare module Swagger {
         in: string;
     }
 
-    interface BaseOAuthSecuirty extends BaseSecurity {
+    export interface BaseOAuthSecuirty extends BaseSecurity {
         flow: string;
     }
 
@@ -229,7 +229,7 @@ declare module Swagger {
         [scopeName: string]: string;
     }
 
-    type Secuirty =
+    export type Secuirty =
         BasicAuthenticationSecurity |
         OAuth2AccessCodeSecurity |
         OAuth2ApplicationSecurity |
@@ -246,12 +246,12 @@ declare module Swagger {
         schemes?: [string];
         consumes?: [string];
         produces?: [string];
-        paths: { [pathName: string]: Path }
-        definitions?: { [definitionsName: string]: Schema }
-        parameters?: { [parameterName: string]: BodyParameter | QueryParameter }
-        responses?: { [responseName: string]: Response }
-        security?: [Secuirty]
-        securityDefinitions?: { [securityDefinitionName: string]: Secuirty }
-        tags?: [Tag]
+        paths: { [pathName: string]: Path };
+        definitions?: { [definitionsName: string]: Schema };
+        parameters?: { [parameterName: string]: BodyParameter | QueryParameter };
+        responses?: { [responseName: string]: Response };
+        security?: [Secuirty];
+        securityDefinitions?: { [securityDefinitionName: string]: Secuirty };
+        tags?: [Tag];
     }
 }
